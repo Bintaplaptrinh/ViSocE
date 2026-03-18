@@ -1,7 +1,6 @@
 # ViSocE Emotion Classification
 ## 1. Project Overview
 This project implements a context-aware multi-label emotion classification pipeline for Vietnamese Gen Z social media comments.
-
 The project follows the ViSocE direction described in the manuscript in [../main (1).tex](../main%20(1).tex), with these core ideas:
 - Emotion interpretation must use both Context and Comment.
 - Multi-label output is preferred for mixed emotions such as sarcasm and schadenfreude.
@@ -29,7 +28,7 @@ final/
   - 01_prepare_data.py: data loading and split
   - 02_train_models.py: optional model training with early stopping
   - 03_test_existing_models_split.py: evaluate existing checkpoints on local split data
-  - 04_export_ieee_tables.py: LaTeX table export for IEEE manuscript
+  - 04_export_tables.py: LaTeX table export for manuscript
 - src/
   - constants.py: labels and mappings
   - config_loader.py: YAML configuration utilities
@@ -44,6 +43,7 @@ final/
 - data/
   - ViSocE.json: local copied dataset file
   - dictionary.json: local copied slang dictionary
+  - train.json, val.json, test.json: split files
 - reports/
   - generated table files
 - requirements.txt
@@ -155,5 +155,5 @@ Use bibliography style and report:
 2. Check paths in config/project.yaml
 3. Run python scripts/01_prepare_data.py
 4. Run python scripts/03_test_existing_models_split.py
-5. Run python scripts/04_export_ieee_tables.py
-6. Attach reports/ieee_results_table.tex to the manuscript
+5. Run python scripts/04_export_tables.py
+6. Attach reports/results_table.tex to the manuscript
