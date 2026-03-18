@@ -1,0 +1,234 @@
+{
+  "model": "PhoBERT_MHA_MLP",
+  "model_file": "best_PhoBERT_MHA_MLP.pt",
+  "checkpoint": "E:\\PCDOC\\NGHIENCUUKHOAHOC\\dataupload\\softlogic_vibert\\data\\newpipeline\\final\\outputs\\best_PhoBERT_MHA_MLP.pt",
+  "num_labels": 7,
+  "labels": [
+    "Enjoyment",
+    "Sadness",
+    "Anger",
+    "Surprise",
+    "Fear",
+    "Disgust",
+    "Other"
+  ],
+  "num_samples_val": 3115,
+  "num_samples_test": 3115,
+  "dropped_val_rows": 0,
+  "dropped_test_rows": 0,
+  "threshold_source": "validation_tuned",
+  "thresholds": [
+    0.44999998807907104,
+    0.8899999856948853,
+    0.8500000238418579,
+    0.949999988079071,
+    0.9300000071525574,
+    0.4300000071525574,
+    0.12999999523162842
+  ],
+  "metrics": {
+    "Accuracy": 0.897500573263013,
+    "F1-micro": 0.7196789163426565,
+    "F1-macro": 0.7121143476640405,
+    "F1-weighted": 0.7217904771502393
+  },
+  "classification_report": {
+    "Enjoyment": {
+      "precision": 0.7524964336661911,
+      "recall": 0.8222915042868277,
+      "f1-score": 0.7858472998137802,
+      "support": 1283.0
+    },
+    "Sadness": {
+      "precision": 0.7797356828193832,
+      "recall": 0.6833976833976834,
+      "f1-score": 0.7283950617283951,
+      "support": 518.0
+    },
+    "Anger": {
+      "precision": 0.815028901734104,
+      "recall": 0.7175572519083969,
+      "f1-score": 0.7631935047361299,
+      "support": 393.0
+    },
+    "Surprise": {
+      "precision": 0.7112299465240641,
+      "recall": 0.6535626535626535,
+      "f1-score": 0.6811779769526248,
+      "support": 407.0
+    },
+    "Fear": {
+      "precision": 0.7177033492822966,
+      "recall": 0.8152173913043478,
+      "f1-score": 0.7633587786259542,
+      "support": 184.0
+    },
+    "Disgust": {
+      "precision": 0.6352941176470588,
+      "recall": 0.7035830618892508,
+      "f1-score": 0.6676970633693973,
+      "support": 614.0
+    },
+    "Other": {
+      "precision": 0.5180533751962323,
+      "recall": 0.6991525423728814,
+      "f1-score": 0.5951307484220018,
+      "support": 472.0
+    },
+    "micro avg": {
+      "precision": 0.6994149195514383,
+      "recall": 0.7411521570653578,
+      "f1-score": 0.7196789163426565,
+      "support": 3871.0
+    },
+    "macro avg": {
+      "precision": 0.70422025812419,
+      "recall": 0.7278231555317202,
+      "f1-score": 0.7121143476640405,
+      "support": 3871.0
+    },
+    "weighted avg": {
+      "precision": 0.7093211450030532,
+      "recall": 0.7411521570653578,
+      "f1-score": 0.7217904771502393,
+      "support": 3871.0
+    },
+    "samples avg": {
+      "precision": 0.7020866773675762,
+      "recall": 0.7382022471910112,
+      "f1-score": 0.7050187265917602,
+      "support": 3871.0
+    }
+  },
+  "multilabel_confusion_matrix": [
+    [
+      [
+        1485,
+        347
+      ],
+      [
+        228,
+        1055
+      ]
+    ],
+    [
+      [
+        2497,
+        100
+      ],
+      [
+        164,
+        354
+      ]
+    ],
+    [
+      [
+        2658,
+        64
+      ],
+      [
+        111,
+        282
+      ]
+    ],
+    [
+      [
+        2600,
+        108
+      ],
+      [
+        141,
+        266
+      ]
+    ],
+    [
+      [
+        2872,
+        59
+      ],
+      [
+        34,
+        150
+      ]
+    ],
+    [
+      [
+        2253,
+        248
+      ],
+      [
+        182,
+        432
+      ]
+    ],
+    [
+      [
+        2336,
+        307
+      ],
+      [
+        142,
+        330
+      ]
+    ]
+  ],
+  "threshold_tuning": [
+    {
+      "Label": "Enjoyment",
+      "Threshold": 0.45000000000000007,
+      "Precision": 0.7474674384949349,
+      "F1": 0.783763277693475,
+      "Constraint": "P>=0.35",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Sadness",
+      "Threshold": 0.8900000000000002,
+      "Precision": 0.75390625,
+      "F1": 0.7262464722483537,
+      "Constraint": "P>=0.35",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Anger",
+      "Threshold": 0.8500000000000002,
+      "Precision": 0.7589285714285714,
+      "F1": 0.6929347826086957,
+      "Constraint": "P>=0.40",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Surprise",
+      "Threshold": 0.9500000000000002,
+      "Precision": 0.7020725388601037,
+      "F1": 0.6577669902912622,
+      "Constraint": "P>=0.35",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Fear",
+      "Threshold": 0.9300000000000002,
+      "Precision": 0.7128205128205128,
+      "F1": 0.7315789473684211,
+      "Constraint": "P>=0.40",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Disgust",
+      "Threshold": 0.43000000000000005,
+      "Precision": 0.6042857142857143,
+      "F1": 0.6487730061349694,
+      "Constraint": "P>=0.45",
+      "Status": "Constraint satisfied"
+    },
+    {
+      "Label": "Other",
+      "Threshold": 0.13,
+      "Precision": 0.5112262521588946,
+      "F1": 0.5826771653543307,
+      "Constraint": "P>=0.35",
+      "Status": "Constraint satisfied"
+    }
+  ],
+  "source": "split_retest_existing_checkpoints"
+}

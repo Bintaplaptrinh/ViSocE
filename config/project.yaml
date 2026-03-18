@@ -1,0 +1,43 @@
+project:
+  name: ViSocE-Emotion-Classification
+  seed: 42
+
+paths:
+  data_json: ./data/ViSocE.json
+  slang_dict: ./data/dictionary.json
+  models_dir: ../models
+  outputs_dir: ./outputs
+
+dataset:
+  include_other: true
+  max_length: 128
+
+training:
+  batch_size_train: 16
+  batch_size_eval: 32
+  epochs: 20
+  learning_rate: 2.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  patience: 3
+  min_delta: 1.0e-4
+  dropout: 0.3
+  num_heads: 8
+  grid_size: 5
+
+threshold_tuning:
+  min_precision_default: 0.35
+  per_label_min_precision:
+    Enjoyment: 0.35
+    Sadness: 0.35
+    Anger: 0.40
+    Surprise: 0.35
+    Fear: 0.40
+    Disgust: 0.45
+
+experiments:
+  models:
+    - PhoBERT_MLP
+    - PhoBERT_MHA_MLP
+    - PhoBERT_DualStream
+    - PhoBERT_MVA_KAN_1D

@@ -1,0 +1,17 @@
+{
+  "include_other": true,
+  "labels": [
+    "Enjoyment",
+    "Sadness",
+    "Anger",
+    "Surprise",
+    "Fear",
+    "Disgust",
+    "Other"
+  ],
+  "num_samples": {
+    "train": 14535,
+    "val": 3115,
+    "test": 3115
+  }
+}
